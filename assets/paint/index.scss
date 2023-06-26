@@ -93,17 +93,86 @@ body {
             }
         }
     }
+    .thanks { 
+        background-color: $white;
+        >* {
+            border: none;
+        }
+        .thank-title {
+            font-family: bold;
+            color: $dark-slate-grey;
+        }
+        .confirm {
+            font-size: 13px;
+            color: $dark-slate-grey;
+        }
+        [type="button"] {
+            background-color: $dark-slate-grey;
+            font-family: regular;
+            isolation: isolate;
+            .blink {
+                width: 30px;
+                height: 30px;
+                background-color: $tomato;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -200%);
+                z-index: -1;
+            }
+            &:hover {
+                .blink {
+                    transform: translate(-50%, -50%)scale(30);
+                    transition: transform .8s;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
     .parent-wrap {
-        background-color: $white;
+        background-color: $dark-slate-grey;
         .child-wrap {
             border-radius: 0;
             .right-column {
                 height: 300px;
                 .image-board {
                     background-image: url(./../images/illustration-sign-up-mobile.svg);
+                }
+            }
+        }
+        .thanks { 
+            background-color: $white;
+            margin-top: 200px;
+            >* {
+                border: none;
+            }
+            .thank-title {
+                font-family: bold;
+                color: $dark-slate-grey;
+            }
+            .confirm {
+                font-size: 13px;
+                color: $dark-slate-grey;
+            }
+            [type="button"] {
+                background-color: $dark-slate-grey;
+                font-family: regular;
+                isolation: isolate;
+                .blink {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $tomato;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -200%);
+                    z-index: -1;
+                }
+                &:hover {
+                    .blink {
+                        transform: translate(-50%, -50%)scale(30);
+                        transition: transform .8s;
+                    }
                 }
             }
         }

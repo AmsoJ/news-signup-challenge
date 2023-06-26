@@ -80,10 +80,42 @@ body {
   background-image: url(./../images/illustration-sign-up-desktop.svg);
   background-size: cover;
 }
+.parent-wrap .thanks {
+  background-color: hsl(0, 0%, 100%);
+}
+.parent-wrap .thanks > * {
+  border: none;
+}
+.parent-wrap .thanks .thank-title {
+  font-family: bold;
+  color: hsl(234, 29%, 20%);
+}
+.parent-wrap .thanks .confirm {
+  font-size: 13px;
+  color: hsl(234, 29%, 20%);
+}
+.parent-wrap .thanks [type=button] {
+  background-color: hsl(234, 29%, 20%);
+  font-family: regular;
+  isolation: isolate;
+}
+.parent-wrap .thanks [type=button] .blink {
+  width: 30px;
+  height: 30px;
+  background-color: hsl(4, 100%, 67%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  z-index: -1;
+}
+.parent-wrap .thanks [type=button]:hover .blink {
+  transform: translate(-50%, -50%) scale(30);
+  transition: transform 0.8s;
+}
 
 @media screen and (max-width: 600px) {
   .parent-wrap {
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(234, 29%, 20%);
   }
   .parent-wrap .child-wrap {
     border-radius: 0;
@@ -93,5 +125,38 @@ body {
   }
   .parent-wrap .child-wrap .right-column .image-board {
     background-image: url(./../images/illustration-sign-up-mobile.svg);
+  }
+  .parent-wrap .thanks {
+    background-color: hsl(0, 0%, 100%);
+    margin-top: 200px;
+  }
+  .parent-wrap .thanks > * {
+    border: none;
+  }
+  .parent-wrap .thanks .thank-title {
+    font-family: bold;
+    color: hsl(234, 29%, 20%);
+  }
+  .parent-wrap .thanks .confirm {
+    font-size: 13px;
+    color: hsl(234, 29%, 20%);
+  }
+  .parent-wrap .thanks [type=button] {
+    background-color: hsl(234, 29%, 20%);
+    font-family: regular;
+    isolation: isolate;
+  }
+  .parent-wrap .thanks [type=button] .blink {
+    width: 30px;
+    height: 30px;
+    background-color: hsl(4, 100%, 67%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    z-index: -1;
+  }
+  .parent-wrap .thanks [type=button]:hover .blink {
+    transform: translate(-50%, -50%) scale(30);
+    transition: transform 0.8s;
   }
 }

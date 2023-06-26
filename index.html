@@ -13,6 +13,7 @@
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
   
   <!-- <script src="./tilt.js-master/src/tilt.jquery.js"></script> -->
+  <script src="./bootstrap/node_modules/jquery/dist/jquery.js"></script>
   <script type="module" src="./assets/script.js"></script>
   
   <title>Newsletter sign-up</title>
@@ -72,6 +73,24 @@
       <div class="right-column order-first order-md-last col-12 col-sm-6 p-md-3">
         <div class="image-board rounded-4" style="width: 100%; height: 100%;"></div>
       </div>
+    </div>
+
+    <div class="thanks d-none container-md list-group list-group-flush p-3 rounded-4" style="min-height: 300px;max-width: 300px;">
+      <span class="list-group-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g></svg>
+      </span>
+
+      <h3 class="thank-title p-0 list-group-item">Thanks for subscribing!</h3>
+
+      <p class="confirm list-group-item mt-0 p-0">
+        A confirmation email has been sent to <b class="your-email">Jose@gmail.com</b>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+
+      <button type="button" class="dismiss btn text-white position-relative overflow-hidden">
+        Dismiss Message
+        <span class="blink position-absolute d-block  rounded-circle"></span>
+      </button>
     </div>
 
   </div>
