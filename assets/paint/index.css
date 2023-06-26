@@ -1,0 +1,97 @@
+@font-face {
+  font-family: bold;
+  src: url(./../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: regular;
+  src: url(./../fonts/Roboto-Regular.ttf);
+}
+body {
+  min-height: 100vh;
+}
+
+.parent-wrap {
+  min-height: inherit;
+  background-color: hsl(234, 29%, 20%);
+}
+.parent-wrap .child-wrap {
+  min-height: 200px;
+  max-width: 700px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+}
+.parent-wrap .child-wrap .left-column .title {
+  color: hsl(234, 29%, 20%);
+  font-family: bold;
+}
+.parent-wrap .child-wrap .left-column .subtitle {
+  color: hsl(234, 29%, 20%);
+  font-family: regular;
+  font-size: 13px;
+}
+.parent-wrap .child-wrap .left-column .number .number-item {
+  font-size: 13px;
+  color: hsl(234, 29%, 20%);
+  border: none;
+}
+.parent-wrap .child-wrap .left-column .number .number-item .icon-good .icon-good-svg {
+  transform: scale(0.8);
+}
+.parent-wrap .child-wrap .left-column .form label .email-label {
+  color: hsl(234, 29%, 20%);
+}
+.parent-wrap .child-wrap .left-column .form label input {
+  font-family: regular;
+  color: hsl(234, 29%, 20%);
+  caret-color: hsl(234, 29%, 20%);
+  border: none;
+  outline: none;
+}
+.parent-wrap .child-wrap .left-column .form label input:valid {
+  background-color: floralwhite;
+}
+.parent-wrap .child-wrap .left-column .form label input::placeholder {
+  color: hsl(231, 7%, 60%);
+}
+.parent-wrap .child-wrap .left-column .form .submit-btn {
+  background-color: hsl(234, 29%, 20%);
+  font-family: bold;
+  isolation: isolate;
+  border: none;
+  outline: none;
+}
+.parent-wrap .child-wrap .left-column .form .submit-btn .blink {
+  width: 30px;
+  height: 30px;
+  background-color: hsl(4, 100%, 67%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  z-index: -1;
+}
+.parent-wrap .child-wrap .left-column .form .submit-btn:hover .blink {
+  transform: translate(-50%, -50%) scale(30);
+  transition: transform 0.8s;
+}
+.parent-wrap .child-wrap .right-column {
+  min-height: 100%;
+}
+.parent-wrap .child-wrap .right-column .image-board {
+  background-image: url(./../images/illustration-sign-up-desktop.svg);
+  background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .parent-wrap {
+    background-color: hsl(0, 0%, 100%);
+  }
+  .parent-wrap .child-wrap {
+    border-radius: 0;
+  }
+  .parent-wrap .child-wrap .right-column {
+    height: 300px;
+  }
+  .parent-wrap .child-wrap .right-column .image-board {
+    background-image: url(./../images/illustration-sign-up-mobile.svg);
+  }
+}

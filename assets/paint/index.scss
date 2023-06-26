@@ -1,0 +1,111 @@
+@import './paint';
+
+// typography
+@font-face {
+    font-family: bold;
+    src: url(./../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: regular;
+    src: url(./../fonts/Roboto-Regular.ttf);
+}
+//
+body {
+    min-height: 100vh;
+}
+
+.parent-wrap {
+    min-height: inherit;
+    background-color: $dark-slate-grey;
+    .child-wrap {
+        min-height: 200px;
+        max-width: 700px;
+        background-color: $white;
+        border-radius: 30px;
+        .left-column {
+            .title {
+                color: $dark-slate-grey;
+                font-family: bold;
+            }
+            .subtitle {
+                color: $dark-slate-grey;
+                font-family: regular;
+                font-size: 13px;
+            }
+            .number {
+                .number-item {
+                    font-size: 13px;
+                    color: $dark-slate-grey;
+                    border: none;
+                    .icon-good .icon-good-svg {
+                        transform: scale(.8);
+                    }
+                }
+            }
+            .form {
+                label {
+                    .email-label {
+                        color: $dark-slate-grey;
+                    }
+                    input {
+                        font-family: regular;
+                        color: $dark-slate-grey;
+                        caret-color: $dark-slate-grey;
+                        border: none;
+                        outline: none;
+                        &:valid {
+                           background-color: floralwhite;
+                        }
+                        &::placeholder {
+                            color: $grey;
+                        }
+                    }
+                }
+                .submit-btn {
+                    background-color: $dark-slate-grey;
+                    font-family: bold;
+                    isolation: isolate;
+                    border: none;
+                    outline: none;
+                    .blink {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $tomato;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -200%);
+                        z-index: -1;
+                    }
+                    &:hover {
+                        .blink {
+                            transform: translate(-50%, -50%)scale(30);
+                            transition: transform .8s;
+                        }
+                    }
+                }
+            }
+        }
+        .right-column {
+            min-height: 100%;
+            .image-board {
+                background-image: url(./../images/illustration-sign-up-desktop.svg);
+                background-size: cover;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .parent-wrap {
+        background-color: $white;
+        .child-wrap {
+            border-radius: 0;
+            .right-column {
+                height: 300px;
+                .image-board {
+                    background-image: url(./../images/illustration-sign-up-mobile.svg);
+                }
+            }
+        }
+    }
+}
